@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.graveno.alphalab.covidtracker.fragments.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.graveno.alphalab.covidtracker.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_continentDetailFragment"
+            app:destination="@id/continentDetailFragment"
+            app:popUpTo="@id/continentDetailFragment"
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_homeFragment_to_countryDetailFragment"
+            app:destination="@id/countryDetailFragment"
+            app:popUpTo="@id/countryDetailFragment"
+            app:popUpToInclusive="true"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/continentDetailFragment"
+        android:name="com.graveno.alphalab.covidtracker.fragments.continent.detail.ContinentDetailFragment"
+        android:label="fragment_continent_detail"
+        tools:layout="@layout/fragment_continent_detail" >
+
+        <argument android:name="@string/nav_continent"
+            app:argType="com.graveno.alphalab.covidtracker.app.model.ContinentsModel" />
+        <action
+            android:id="@+id/action_continentDetailFragment_to_countryDetailFragment"
+            app:destination="@id/countryDetailFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/countryDetailFragment"
+        android:name="com.graveno.alphalab.covidtracker.fragments.country.countrydetail.CountryDetailFragment"
+        android:label="fragment_country_detail"
+        tools:layout="@layout/fragment_country_detail">
+
+        <argument android:name="@string/nav_country"
+            app:argType="com.graveno.alphalab.covidtracker.app.model.CountryModel"/>
+
+    </fragment>
+
+</navigation>

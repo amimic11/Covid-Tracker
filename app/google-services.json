@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "743066008138",
+    "firebase_url": "https://coronavirus-tracker-5668d.firebaseio.com",
+    "project_id": "coronavirus-tracker-5668d",
+    "storage_bucket": "coronavirus-tracker-5668d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743066008138:android:f772610125d989130384b3",
+        "android_client_info": {
+          "package_name": "com.graveno.alphalab.covidtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743066008138-d9vshhscdvdt71uh9gkmkmdik6u6ped3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.graveno.alphalab.covidtracker",
+            "certificate_hash": "e90da609d07f01e6d24df712f0df82ae2fddd689"
+          }
+        },
+        {
+          "client_id": "743066008138-7o7n70lu563ab9j1fb0b8oolk7h55chp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6BCP968Jp6AnsJNAjea5_wY0OS9AMcpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743066008138-7o7n70lu563ab9j1fb0b8oolk7h55chp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

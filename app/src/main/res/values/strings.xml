@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Coronavirus Tracker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="new_status">↑ %1$s</string>
+    <string name="country_continent">%1$s | %2$s</string>
+
+    <!--settings...-->
+    <string name="nav_continent">Continent</string>
+    <string name="nav_country">Country</string>
+    <string name="about">About</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="exit">Exit</string>
+    <string name="about_me">https://github.com/amimic11/Declaration-/blob/master/About%20Me</string>
+    <string name="privacy_policy_link">https://github.com/amimic11/Declaration-/blob/master/Covid%20Tracker%20Privacy%20Policy</string>
+</resources>

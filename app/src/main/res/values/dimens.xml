@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_size">12sp</dimen>
+    <dimen name="value_size">20sp</dimen>
+    <dimen name="value_small_size">15sp</dimen>
+
+    <dimen name="mini_margin">5dp</dimen>
+    <dimen name="normal_margin">10dp</dimen>
+    <dimen name="big_margin">16sp</dimen>
+    <dimen name="micro_margin">3dp</dimen>
+</resources>

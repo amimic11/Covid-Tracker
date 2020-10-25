@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.global.GlobalFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--population and countries...-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:elevation="10dp"
+                android:layout_toStartOf="@+id/lyt_gl"
+                android:id="@+id/lyt_po">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Population"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:textSize="@dimen/value_size"
+                        android:id="@+id/global_population"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lyt_po"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/mini_margin"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:elevation="10dp"
+                android:layout_toStartOf="@+id/lyt_gl">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Affected Countries"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:id="@+id/txt_af_co"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:textSize="@dimen/value_size"
+                        android:id="@+id/global_affect_country"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:elevation="10dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginBottom="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/normal_margin"
+                android:layout_marginStart="@dimen/mini_margin"
+                app:cardCornerRadius="10dp"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/lyt_gl">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:id="@+id/img_global"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <!--active and critical...-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:textSize="@dimen/value_size"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:id="@+id/global_active"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Active Per OneMillion"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:textSize="@dimen/value_small_size"
+                        android:id="@+id/global_active_million"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Critical"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_red_light"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:textSize="@dimen/value_size"
+                        android:id="@+id/global_critical"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Critical Per OneMillion"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_red_light"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:textSize="@dimen/value_small_size"
+                        android:id="@+id/global_critical_million"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!--case, test...-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Test"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="@dimen/value_size"
+                        android:id="@+id/global_test"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Test Per OneMillion"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:gravity="center"
+                        android:textSize="@dimen/value_small_size"
+                        android:id="@+id/global_test_million"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Case"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="@dimen/value_size"
+                        android:id="@+id/global_total_case"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:textSize="@dimen/value_small_size"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:id="@+id/global_new_case"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Case Per OneMillion"
+                        android:textSize="@dimen/title_size"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="@dimen/value_small_size"
+                        android:id="@+id/global_case_million"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!--recover , death...-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Recover"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="@dimen/value_size"
+                        android:id="@+id/global_total_recovered"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:textSize="@dimen/value_small_size"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:id="@+id/global_new_recovered"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Case Per OneMillion"
+                        android:textSize="@dimen/title_size"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="@dimen/value_small_size"
+                        android:id="@+id/global_recovered_million"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                app:cardCornerRadius="10dp"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_marginTop="@dimen/normal_margin"
+                android:layout_marginEnd="@dimen/mini_margin"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Death"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/value_size"
+                        android:id="@+id/global_total_deaths"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:textSize="@dimen/value_small_size"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="center"
+                        android:id="@+id/global_new_death"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Case Per OneMillion"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/title_size"
+                        android:layout_margin="@dimen/mini_margin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/mini_margin"
+                        android:layout_marginStart="@dimen/mini_margin"
+                        android:layout_marginBottom="@dimen/normal_margin"
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/value_small_size"
+                        android:id="@+id/global_death_million"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/mini_margin"
+            android:layout_marginBottom="@dimen/mini_margin"
+            android:elevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/mini_margin"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="last Updated"
+                    android:textSize="@dimen/title_size"
+                    android:layout_margin="@dimen/mini_margin"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:textSize="@dimen/value_size"
+                    android:id="@+id/global_update"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
