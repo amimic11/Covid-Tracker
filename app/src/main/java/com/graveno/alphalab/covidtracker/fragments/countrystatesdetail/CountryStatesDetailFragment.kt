@@ -35,8 +35,8 @@ class CountryStatesDetailFragment : Fragment() {
         viewModel.run {
             loadStatesDetail(mainActivity, web_states_detail)
             img_web_forward.setOnClickListener { if (web_states_detail.canGoForward()) web_states_detail.goForward() }
-            img_web_forward.setOnClickListener { if (web_states_detail.canGoBack()) web_states_detail.goBack() }
-            img_web_forward.setOnClickListener { loadStatesDetail(mainActivity, web_states_detail) }
+            img_web_back.setOnClickListener { if (web_states_detail.canGoBack()) web_states_detail.goBack() }
+            img_web_refresh.setOnClickListener { loadStatesDetail(mainActivity, web_states_detail) }
         }
     }
 }
