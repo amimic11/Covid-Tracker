@@ -1,7 +1,6 @@
 package com.graveno.alphalab.covidtracker.fragments.setting
 
 import android.app.Application
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.graveno.alphalab.covidtracker.R
@@ -23,12 +22,12 @@ class SettingViewModel(application: Application) : AndroidViewModel(application)
 //        settingModel.settingDrawable = R.drawable.ic_arrow_right
 //        settings.add(settingModel)
 
-        settingModel = SettingModel()
-        settingModel.settingName = mainActivity.getString(R.string.privacy_policy)
-        settingModel.settingDrawable = R.drawable.ic_arrow_right
-        settings.add(settingModel)
-        settingModel = SettingModel()
+//        settingModel = SettingModel()
+//        settingModel.settingName = mainActivity.getString(R.string.privacy_policy)
+//        settingModel.settingDrawable = R.drawable.ic_arrow_go
+//        settings.add(settingModel)
 
+        settingModel = SettingModel()
         settingModel.settingName = mainActivity.getString(R.string.exit)
         settingModel.settingDrawable = R.drawable.ic_exit
         settings.add(settingModel)

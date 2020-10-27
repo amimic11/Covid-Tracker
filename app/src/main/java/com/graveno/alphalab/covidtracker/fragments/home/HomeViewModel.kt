@@ -12,6 +12,7 @@ import com.graveno.alphalab.covidtracker.R
 import com.graveno.alphalab.covidtracker.activity.MainActivity
 import com.graveno.alphalab.covidtracker.fragments.continent.ContinentFragment
 import com.graveno.alphalab.covidtracker.fragments.country.CountryFragment
+import com.graveno.alphalab.covidtracker.fragments.countrystatesdetail.CountryStatesDetailFragment
 import com.graveno.alphalab.covidtracker.fragments.global.GlobalFragment
 import com.graveno.alphalab.covidtracker.fragments.setting.SettingFragment
 
@@ -25,6 +26,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         fragments.add(GlobalFragment())
         fragments.add(ContinentFragment())
         fragments.add(CountryFragment())
+        fragments.add(CountryStatesDetailFragment())
         fragments.add(SettingFragment())
 
         adapter = HomeAdapter(fragments, mainActivity)
@@ -44,6 +46,9 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
                    tab.icon = ContextCompat.getDrawable(mainActivity, R.drawable.country)
                }
                3 -> {
+                   tab.icon = ContextCompat.getDrawable(mainActivity, R.drawable.web)
+               }
+               4 -> {
                    tab.icon = ContextCompat.getDrawable(mainActivity, R.drawable.setting)
                }
            }

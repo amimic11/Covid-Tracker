@@ -14,4 +14,8 @@
     <string name="exit">Exit</string>
     <string name="about_me">https://github.com/amimic11/Declaration-/blob/master/About%20Me</string>
     <string name="privacy_policy_link">https://github.com/amimic11/Declaration-/blob/master/Covid%20Tracker%20Privacy%20Policy</string>
+    <string name="india_covid_detail">https://www.covid19india.org/</string>
+    <string name="web_go_back">Web Go Back</string>
+    <string name="web_go_forward">Web Go Forward</string>
+    <string name="web_refresh">Web Refresh</string>
 </resources>

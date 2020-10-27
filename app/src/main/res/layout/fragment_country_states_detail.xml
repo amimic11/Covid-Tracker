@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.countrystatesdetail.CountryStatesDetailFragment">
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lyt_btn_web"
+        android:id="@+id/web_states_detail" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/lyt_btn_web">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/micro_margin"
+            android:src="@drawable/ic_back_arrow"
+            android:id="@+id/img_web_back"
+            android:contentDescription="@string/web_go_back" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/micro_margin"
+            android:src="@drawable/ic_arrow_forward"
+            android:id="@+id/img_web_forward"
+            android:contentDescription="@string/web_go_forward" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/micro_margin"
+            android:src="@drawable/ic_refresh"
+            android:id="@+id/img_web_refresh"
+            android:contentDescription="@string/web_refresh" />
+
+    </LinearLayout>
+
+</RelativeLayout>

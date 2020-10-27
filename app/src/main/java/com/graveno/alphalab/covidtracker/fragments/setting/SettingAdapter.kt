@@ -14,10 +14,7 @@ import com.graveno.alphalab.covidtracker.app.model.SettingModel
 import kotlinx.android.synthetic.main.card_setting.view.*
 
 
-class SettingAdapter(
-    private var list: ArrayList<SettingModel>,
-    private val mainActivity: MainActivity
-) : RecyclerView.Adapter<SettingAdapter.ViewHold>() {
+class SettingAdapter(private var list: ArrayList<SettingModel>, private val mainActivity: MainActivity) : RecyclerView.Adapter<SettingAdapter.ViewHold>() {
     class ViewHold(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindInfo(settingModel: SettingModel, mainActivity: MainActivity) {
             itemView.txt_setting.text = settingModel.settingName
@@ -46,11 +43,7 @@ class SettingAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHold {
-        val rootView : View = LayoutInflater.from(mainActivity).inflate(
-            R.layout.card_setting,
-            parent,
-            false
-        )
+        val rootView : View = LayoutInflater.from(mainActivity).inflate(R.layout.card_setting, parent, false)
         return ViewHold(rootView)
     }
 
