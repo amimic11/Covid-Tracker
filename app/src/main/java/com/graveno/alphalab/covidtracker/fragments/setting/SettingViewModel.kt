@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.graveno.alphalab.covidtracker.R
 import com.graveno.alphalab.covidtracker.activity.MainActivity
 import com.graveno.alphalab.covidtracker.app.model.SettingModel
+import com.graveno.alphalab.covidtracker.fragments.countrystatesdetail.CountryStatesDetailFragment
 
 class SettingViewModel(application: Application) : AndroidViewModel(application) {
     val TAG : String = "SettingViewModel"
@@ -26,6 +27,12 @@ class SettingViewModel(application: Application) : AndroidViewModel(application)
 //        settingModel.settingName = mainActivity.getString(R.string.privacy_policy)
 //        settingModel.settingDrawable = R.drawable.ic_arrow_go
 //        settings.add(settingModel)
+
+        settingModel = SettingModel()
+        settingModel.settingName = mainActivity.getString(R.string.indian_state_detail)
+        settingModel.settingDrawable = R.drawable.ic_web_selected
+        settings.add(settingModel)
+        obsSettings.postValue(settings)
 
         settingModel = SettingModel()
         settingModel.settingName = mainActivity.getString(R.string.exit)

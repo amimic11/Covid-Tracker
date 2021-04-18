@@ -18,4 +18,5 @@
     <string name="web_go_back">Web Go Back</string>
     <string name="web_go_forward">Web Go Forward</string>
     <string name="web_refresh">Web Refresh</string>
+    <string name="indian_state_detail">Indian states detail</string>
 </resources>

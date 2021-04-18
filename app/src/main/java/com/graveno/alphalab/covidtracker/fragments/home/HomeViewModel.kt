@@ -26,7 +26,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         fragments.add(GlobalFragment())
         fragments.add(ContinentFragment())
         fragments.add(CountryFragment())
-        fragments.add(CountryStatesDetailFragment())
+//        fragments.add(CountryStatesDetailFragment())
         fragments.add(SettingFragment())
 
         adapter = HomeAdapter(fragments, mainActivity)
@@ -45,10 +45,10 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
                2 -> {
                    tab.icon = ContextCompat.getDrawable(mainActivity, R.drawable.country)
                }
+//               3 -> {
+//                   tab.icon = ContextCompat.getDrawable(mainActivity, R.drawable.web)
+//               }
                3 -> {
-                   tab.icon = ContextCompat.getDrawable(mainActivity, R.drawable.web)
-               }
-               4 -> {
                    tab.icon = ContextCompat.getDrawable(mainActivity, R.drawable.setting)
                }
            }

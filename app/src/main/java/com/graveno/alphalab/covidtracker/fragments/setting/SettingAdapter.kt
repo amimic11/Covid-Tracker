@@ -24,15 +24,10 @@ class SettingAdapter(private var list: ArrayList<SettingModel>, private val main
             )
             itemView.lyt_setting.setOnClickListener {
                 when(settingModel.settingName) {
-                    mainActivity.getString(R.string.about) -> {
+                    mainActivity.getString(R.string.indian_state_detail) -> {
                         //open about page...
-                        val aboutIntent = Intent(Intent.ACTION_VIEW, Uri.parse(mainActivity.getString(R.string.about_me)))
+                        val aboutIntent = Intent(Intent.ACTION_VIEW, Uri.parse(mainActivity.getString(R.string.india_covid_detail)))
                         mainActivity.startActivity(aboutIntent)
-                    }
-                    mainActivity.getString(R.string.privacy_policy) -> {
-                        //open privacy policy...
-                        val privacyIntent = Intent(Intent.ACTION_VIEW, Uri.parse(mainActivity.getString(R.string.privacy_policy_link)))
-                        mainActivity.startActivity(privacyIntent)
                     }
                     mainActivity.getString(R.string.exit) -> {
                         mainActivity.onBackPressed()
